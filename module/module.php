@@ -6,7 +6,7 @@ foreach ($file as $value) {
 if ($value != 'module.php'){
 		require __DIR__ .'/'. $value;
 	} else {
-		//echo __DIR__ .'/'. $value;
+		// echo __DIR__ .'/'. $value;
 	}
 }
 ?>
