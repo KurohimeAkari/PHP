@@ -1,5 +1,6 @@
 <?
 function ruby($ruby,$rt){
-	echo '<ruby>'.$ruby.'<rt>'.$rt.'</rt></ruby>';
+	$rpl = '('; $rpr = ')';
+	echo '<ruby><rp>'.$rpl.'</rp>'.$ruby.'<rt>'.$rt.'</rt><rp>'.$rpr.'</rp></ruby>';
 }
 ?>
