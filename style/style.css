@@ -1,3 +1,10 @@
+/* body */
+body{
+	background-color: #E7E6E1;
+	font-size: 15px;
+}
+
+
 /* div */
 h2 + section div {
 	background-color:#333 ;
@@ -11,12 +18,31 @@ h2 + section div {
 
 p code{
 	background-color:#333 ;
-	color: #E7E6E1;
+	color: #fff;
 	padding: 10px;
+
 }
 
 p code span {
 	font-weight: bold;
 	background-color: darkred;
 	padding: 5px;
+}
+
+p.inst {
+	background-color:#333 ;
+	color: #fff;
+	padding: 10px;
+	float: right;
+    position: relative;
+    top: -58px;
+}
+
+/* a */
+a {
+	color: #E7E6E1;
+}
+
+a:hover {
+	color: #333;
 }
