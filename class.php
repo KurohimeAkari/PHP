@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php require  __DIR__ . '/module/module.php'; ?>
 <?php include  __DIR__ . '/style/template.php'; ?>
-<?php include  __DIR__ . '/class/begin.php'; ?>
+<?php include  __DIR__ . '/class/module.php'; ?>
 <html lang="ja">
 <head>
 <?php echo head();?>
@@ -10,7 +10,7 @@
 <body>
 	<h1>class</h1>
 	<article>
-		<h2>ルビ作成 Module</h2>
+		<h2>初歩的 Class</h2>
 		<section>
 			<p><code><span>出力</span>：$user = new User("あんねさん");</code></p>
 			<p class='inst'><?php echo gitname('class/begin.php');?></p>
@@ -21,11 +21,18 @@
 				<p><code>$user[1] = new User("てまりちゃん");</code></p>
 				<p>インスタンスは「配列可能」 むしろ配列を意識した書き方のほうがいいかもしれない</p>
 			</div>
-			<p>ルビといえば難読漢字の上に付与する「ひらがな」ですが、いちいちとHTMLを書くのが面倒くさかったので制作しました</p>
 		</section>
-		<h2>ほにゃほにゃ Module</h2>
+		<h2>Extends</h2>
 		<section>
-			
+			<p><code><span>出力</span>：$olde = new Older("1800");,$child = new Children("600"); </code></p>
+			<p class='inst'><?php echo gitname('class/extends.php');?></p>
+			<div>
+				<p><?php $older[0]= new Older("1800"); echo $older[0]->says(); ?></p>
+				<p><?php $child[0]= new Children("600"); echo $child[0]->says(); ?></p>
+				<p><code>class Children extends Older {}</code></p>
+			</div>
+			<p>処理は同じだけども「大人料金」「子供料金」のように処理を分けたいときは[ extends ] を使う。</p>
+			<p>別 [ Class ] だが"Older"に書かれている<code>public $money;</code>と<code>__construct($money)</code>は継承される。</p>
 		</section>
 	</article>
 </body>

@@ -18,11 +18,15 @@ h2 + section div {
 
 
 /*p code */
+p:first-child code {
+	margin: 0px !important;
+}
 
 p code{
 	background-color:#333 ;
 	color: #fff;
 	padding: 10px;
+	margin: 0px 10px;
 
 }
 
@@ -43,7 +47,7 @@ p.inst {
 	padding: 10px;
 	float: right;
     position: relative;
-    top: -58px;
+    top: -70px;
 }
 
 /* a */
