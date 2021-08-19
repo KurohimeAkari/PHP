@@ -2,6 +2,9 @@
 body{
 	background-color: #E7E6E1;
 	font-size: 15px;
+	line-height: 1.7;
+    letter-spacing: 1px;
+    font-family: /*"Shin Go Regular",*/"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
 
 
@@ -27,6 +30,11 @@ p code span {
 	font-weight: bold;
 	background-color: darkred;
 	padding: 5px;
+}
+
+div p code{
+	background-color:none ;
+	white-space: nowrap;
 }
 
 p.inst {

@@ -19,6 +19,10 @@
 			</div>
 			<p>ルビといえば難読漢字の上に付与する「ひらがな」ですが、いちいちとHTMLを書くのが面倒くさかったので制作しました</p>
 		</section>
+		<h2>ほにゃほにゃ Module</h2>
+		<section>
+			
+		</section>
 	</article>
 </body>
 </html>
