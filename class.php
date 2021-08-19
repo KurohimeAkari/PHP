@@ -8,6 +8,7 @@
 <title>PHP Research:class</title>
 </head>
 <body>
+	<? nav() ?>
 	<h1>class</h1>
 	<article>
 		<h2>初歩的 Class</h2>
