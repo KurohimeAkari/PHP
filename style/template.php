@@ -1,4 +1,5 @@
 <?
+
 function head() {
 	echo '
 	<meta http-equiv="Expires" content="86400">
@@ -10,4 +11,14 @@ function head() {
 function gitname($name){
 	$giturl ='https://github.com/KurohimeAkari/PHP/blob/master/';
 	echo '<a href="'.$giturl.$name.'" target="_blank">Install</a>';
+}
+
+function nav(){
+	$file = glob("*.php");
+	echo '<nav><div><strong>PHP<br>Research</strong></div><div id="menue">Menu</div><ul>';
+		foreach ($file as $value) {
+			$title = str_replace('.php', '', $value);
+			echo '<li><a href='."$value".'>'.$title.'</a></li>';
+		}
+	echo '</ul></nav>';
 }

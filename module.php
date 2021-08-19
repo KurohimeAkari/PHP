@@ -7,6 +7,7 @@
 <title>PHP Research</title>
 </head>
 <body>
+	<? nav() ?>
 	<h1>Module</h1>
 	<article>
 		<h2>ルビ作成 Module</h2>
