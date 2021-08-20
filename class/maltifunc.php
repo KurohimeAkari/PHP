@@ -8,7 +8,7 @@ class Maltiolder{
 		$this->money = $money;
 		$this->count = $count;
 
-		if ($count == '' || $count == nil) {
+		if ($count == '' || $count == null) {
 			$this->count = 1;
 		} 
 
