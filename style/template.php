@@ -15,7 +15,7 @@ function gitname($name){
 
 function nav(){
 	$file = glob("*.php");
-	echo '<nav><div><strong>PHP<br>Research</strong></div><div id="menue">Menu</div><ul>';
+	echo '<nav><div id="title">PHP<br>Research</div><div id="menue">Menu</div><ul>';
 		foreach ($file as $value) {
 			$title = str_replace('.php', '', $value);
 			echo '<li><a href='."$value".'>'.$title.'</a></li>';
