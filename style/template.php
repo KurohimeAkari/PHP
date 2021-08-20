@@ -15,10 +15,17 @@ function gitname($name){
 
 function nav(){
 	$file = glob("*.php");
+	
+	$nowpage = str_replace('/', '', $_SERVER['REQUEST_URI']);
 	echo '<nav><div id="title">PHP<br>Research</div><div id="menue">Menu</div><ul>';
 		foreach ($file as $value) {
 			$title = str_replace('.php', '', $value);
-			echo '<li><a href='."$value".'>'.$title.'</a></li>';
+			if ($nowpage == $value){
+				$now = 'id="now"';
+			} else {
+				$now = '';
+			}
+			echo '<li><a href='."$value".' '.$now.'>'.$title.'</a></li>';
 		}
 	echo '</ul></nav>';
 }

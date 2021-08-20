@@ -103,7 +103,7 @@ a {
 	color: darkred;
 }
 
-a:hover {
+a:hover,#now {
 	background-color: darkred;
 	color: #E7E6E1;
 }
