@@ -1,7 +1,7 @@
 <?php
 class User{
 	// このClassのみ
-	public $name;
+	protected $name;
 	function __construct($name){
 		// 引数 $name を Class内で使える $this->name に
 		$this->name = $name;

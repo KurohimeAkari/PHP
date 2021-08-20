@@ -21,14 +21,14 @@ class Maltiolder{
 
 	public function says() {
 		$this->cost();
-		echo "大人料金{$this->money}円チケット:{$this->count}人分で{$this->cost} 円です。";
+		echo "大人料金{$this->money}円チケット:{$this->count}人分で{$this->cost}円です。";
 	}
 }
 
 class Maltichildren extends Maltiolder {
 	public function says() {
 		$this->cost();
-		echo "子供料金{$this->money}円チケット:{$this->count}人分で{$this->cost} 円です。";
+		echo "子供料金{$this->money}円チケット:{$this->count}人分で{$this->cost}円です。";
 	}
 }
 
