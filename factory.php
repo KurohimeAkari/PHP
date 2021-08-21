@@ -19,6 +19,16 @@
 			</div>
 			<p>Counter Program</p>
 		</section>
+
+		<h2>csv array reader</h2>
+		<section>
+			<p><code><span>出力</span>：csv_array_reader();</code></p>
+			<p class='inst'><?php echo gitname('factory/counter.php');?></p>
+			<div>
+				<p><? echo csv_array_reader('array.csv');?></p>
+			</div>
+			<p>Counter Program</p>
+		</section>
 	</article>
 </body>
 </html>
