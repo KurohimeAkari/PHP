@@ -15,7 +15,7 @@
 			<p><code><span>出力</span>：counter();</code></p>
 			<p class='inst'><?php echo gitname('factory/counter.php');?></p>
 			<div>
-				<p><? echo counter(); ?></p>
+				<p>合計：<? echo counter(); ?>人来ました。</p>
 			</div>
 			<p>Counter Program</p>
 		</section>
