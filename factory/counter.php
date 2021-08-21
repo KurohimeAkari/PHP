@@ -19,7 +19,12 @@
 		global $filename;
 		$result = adds();
 		$opf = fopen( __DIR__ .'/dat/'.$filename, 'w');
-		fwrite($opf,"{$result[0]},{$result[1]},{$result[2]}");
+		if (flock($opf, LOCK_EX)){
+			fwrite($opf,"{$result[0]},{$result[1]},{$result[2]}");
+		} else {
+			echo'Security Aleat';
+		} 
+		flock($opf, LOCK_UN);
 		fclose($opf);
 	}
 
