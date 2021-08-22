@@ -1,4 +1,8 @@
 <?php
+	// Other PHP 
+	// @ requre ('csv_array_reader.php');
+	// @ $csv[0]= new csv_Reader('array.csv'); echo $csv[0]->csv_view('');
+
 	class csv_Reader{
 	// このClassのみ
 	protected $filename;
@@ -27,10 +31,21 @@
 		}
 	}
 
-	public function csv_view(){
+	public function csv_view($comma = null){
+		if ($comma == null){
+			$comma = ','; // casual Comma
+		}
 		$this->csv_array_reader();
+		echo '<p>';
 		foreach($this->csv_array as $key_v => $vals){
-			echo "<p>{$vals[0]},{$vals[1]},{$vals[2]}</p>";
+			foreach($vals as $key_c => $cols){
+				if ($key_c !== 0){
+					echo $comma;
+				}
+				echo $cols;
+				//echo "{$_val_c[$key_v][$key_s]}";
+			}
+		echo '</p>';
 		} 
 	}
 }

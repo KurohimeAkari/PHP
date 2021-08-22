@@ -27,7 +27,9 @@
 			<div>
 				<p><?php
 				echo '<div>// csv_view() でテンプレ呼び出し</div>';
-				$csv[0]= new csv_Reader('array.csv'); echo $csv[0]->csv_view();
+				$csv[0]= new csv_Reader('array.csv'); echo $csv[0]->csv_view('');
+				echo '<div>// csv_view(\'、\') で好きな分けカンマ呼び出し</div>';
+				echo $csv[0]->csv_view('、');
 				$csv[0]->csv_array_reader();
 				echo '<div>//csv_array_reader();で呼び出し [ factory.php ] で編集</div>';
 					foreach($csv[0]->csv_array as $key_v => $vals){
