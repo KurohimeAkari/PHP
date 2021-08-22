@@ -35,7 +35,7 @@
 		}
 	}
 
-	public function csv_view($comma = null){
+	public function csv_view(?string $comma){
 		if ($comma == null){
 			$comma = ','; // casual Comma
 		}
