@@ -27,5 +27,5 @@ function nav(){
 			}
 			echo '<li><a href='."$value".' '.$now.'>'.$title.'</a></li>';
 		}
-	echo '</ul></nav>';
+	echo '</ul>'.phpversion().'<div>PHP version</div></nav>';
 }
