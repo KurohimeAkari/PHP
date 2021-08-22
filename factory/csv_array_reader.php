@@ -1,5 +1,5 @@
 <?php
-	// Other PHP 
+	// About other PHP Writing 
 	// @ requre ('csv_array_reader.php');
 	// @ $csv[0]= new csv_Reader('array.csv'); echo $csv[0]->csv_view('');
 
@@ -7,7 +7,7 @@
 	// このClassのみ
 	protected $filename;
  	public $csv_array;
-	function __construct($filename){
+	public function __construct($filename){
 		// 引数 $name を Class内で使える $this->name に
 		$this->filename = $filename;
 	}
@@ -16,6 +16,9 @@
 		//echo $this->filename;
 		if(file_exists( __DIR__ .'/'.$this->filename)){
 			$csv = file( __DIR__ .'/'.$this->filename);
+			$csv_flock = fopen(__DIR__ .'/'.$this->filename, 'r');
+			// Read wait lock.
+			flock($csv_flock, LOCK_EX);
 			$csv_body = array_splice($csv, 0);
 			// csv >> array [key][keys]
 			foreach($csv_body as $key => $row) {
@@ -25,6 +28,7 @@
 					$this->csv_array = $arr;
 				}
 			}
+			fclose($csv_flock);
 			return $this->csv_array;
 			} else {
 		echo 'Need to ' .$filename. ' file.';
