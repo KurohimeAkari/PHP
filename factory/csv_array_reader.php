@@ -36,8 +36,8 @@
 			$comma = ','; // casual Comma
 		}
 		$this->csv_array_reader();
-		echo '<p>';
 		foreach($this->csv_array as $key_v => $vals){
+		echo '<p>';
 			foreach($vals as $key_c => $cols){
 				if ($key_c !== 0){
 					echo $comma;
