@@ -10,14 +10,22 @@
 	<? nav() ?>
 	<h1>Module</h1>
 	<article>
-		<h2>My SQL begin</h2>
+		<h2>My SQL Reader</h2>
 		<section>
-			<p><code><span>出力</span>：ruby('八宝菜','はっぽうさい');</code></p>
-			<p class='inst'><?php echo gitname('factory/csv_array_reader.php');?></p>
+			<p><code><span>出力</span>：</code></p>
+			<p class='inst'><?php echo gitname('mysql/mysql_reader.php');?></p>
 			<div>
-				<?php $pdo = db_begin();?>
+				<p>Reader:Once</p>
+				<?php $dbr = new db_Reader('exp',''); $dbr->db_once('exp','2');?>
+				<p>Reader:column</p>
+				<?php $dbr->db_column('exp');?>
+				<p>Reader:line</p>
+				<?php $dbr->db_line('2');?>
+				<p>Reader:All</p>
+				<?php $dbr->db_all();?>
+				<p>Reader:Counts</p>
+				<?php $dbr->db_count();?>
 			</div>
-			<p>ルビといえば難読漢字の上に付与する「ひらがな」ですが、いちいちとHTMLを書くのが面倒くさかったので制作しました</p>
 		</section>
 		<h2>ほにゃほにゃ Module</h2>
 		<section>

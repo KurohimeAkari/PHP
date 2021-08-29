@@ -1,3 +1,4 @@
 
 *.dat
 mysql/db_connect.php
+factory/dat/count.dat
